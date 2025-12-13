@@ -58,8 +58,6 @@ func showInstructions() {
 }
 
 func main() {
-	banner()
-
 	var version bool
 	var ipRange string
 	var expand string
@@ -92,6 +90,7 @@ func main() {
 
 	// Check if no flags were provided
 	if flag.NFlag() == 0 {
+		banner()
 		showInstructions()
 		return
 	}
