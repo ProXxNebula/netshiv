@@ -5,6 +5,12 @@ import (
 	"fmt"
 )
 
+var (
+	Version = "v0.1.0-dev" // manually updated for releases
+	Commit  = "none"       // auto-injected at build time
+	Date    = "unknown"    // auto-injected at build time
+)
+
 func showInstructions() {
 	instructions := fmt.Sprintf(`
 %s%sUSAGE:%s
@@ -96,6 +102,6 @@ func main() {
 	case decoder != "":
 		Codec(encoder, decoder, encodingType)
 	case version != false:
-		fmt.Println("Version flag is active")
+		fmt.Println("Current Version:", Version)
 	}
 }
