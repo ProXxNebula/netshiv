@@ -20,8 +20,8 @@ func showInstructions() {
     %s-range%s <ip/cidr>      Expand IP range
                           Example: -range 192.168.0.1/24
 
-    %s-subnet%s <ip/cidr>     Summarize CIDR information
-                          Example: -subnet 192.168.0.1/24
+    %s-expand%s <ip/cidr>     Summarize CIDR information
+                          Example: -expand 192.168.0.1/24
 
     %s-binary%s <ip>          Convert IP address to binary
                           Example: -binary 192.168.0.1
