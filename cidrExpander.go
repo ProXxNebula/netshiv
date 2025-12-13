@@ -6,7 +6,7 @@ import (
 	"net"
 )
 
-func Expander(ipAddress string) {
+func Expander(ipAddress string, mode int) {
 
 	// Parse IP/CIDR
 	ip, ipNet, err := net.ParseCIDR(ipAddress)
@@ -27,18 +27,21 @@ func Expander(ipAddress string) {
 	// Broadcast: network OR inverted mask
 	broadcast32 := net32 | ^mask32
 
-	// Loop the entire range
-	for x := net32; x <= broadcast32; x++ {
-		buf := make([]byte, 4)
-		binary.BigEndian.PutUint32(buf, x)
-		fmt.Println(net.IP(buf))
-	}
-
 	// Print summary
 	bcast := make([]byte, 4)
 	binary.BigEndian.PutUint32(bcast, broadcast32)
 
-	fmt.Println("Network Address:", networkIP)
-	fmt.Println("Broadcast IP:", net.IP(bcast))
-	fmt.Printf("IP Range: First: %v  Last: %v\n", networkIP, net.IP(bcast))
+	switch mode {
+	case 0:
+		fmt.Println("Network Address:", networkIP)
+		fmt.Println("Broadcast IP:", net.IP(bcast))
+		fmt.Printf("IP Range: First: %v  Last: %v\n", networkIP, net.IP(bcast))
+	case 1:
+		// Loop the entire range
+		for x := net32; x <= broadcast32; x++ {
+			buf := make([]byte, 4)
+			binary.BigEndian.PutUint32(buf, x)
+			fmt.Println(net.IP(buf))
+		}
+	}
 }

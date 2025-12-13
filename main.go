@@ -92,9 +92,11 @@ func main() {
 
 	switch {
 	case ipRange != "":
-		Expander(ipRange)
+		mode := 0
+		Expander(ipRange, mode)
 	case subnet != "":
-		fmt.Println("Subnet flag is active")
+		mode := 1
+		Expander(subnet, mode)
 	case binaryConvert != "":
 		toBinary(binaryConvert)
 	case encoder != "":
