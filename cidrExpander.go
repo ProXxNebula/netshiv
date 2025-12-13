@@ -4,9 +4,15 @@ import (
 	"encoding/binary"
 	"fmt"
 	"net"
+	"os"
 )
 
-func Expander(ipAddress string, mode int) {
+// func saveToFile(output string) {
+// 	newFile, _ := os.Create(output)
+// 	defer newFile.Close()
+// }
+
+func Expander(ipAddress string, output string, mode int) {
 
 	// Parse IP/CIDR
 	ip, ipNet, err := net.ParseCIDR(ipAddress)
@@ -37,11 +43,33 @@ func Expander(ipAddress string, mode int) {
 		fmt.Println("Broadcast IP:", net.IP(bcast))
 		fmt.Printf("IP Range: First: %v  Last: %v\n", networkIP, net.IP(bcast))
 	case 1:
+		var ips []net.IP
 		// Loop the entire range
 		for x := net32; x <= broadcast32; x++ {
 			buf := make([]byte, 4)
 			binary.BigEndian.PutUint32(buf, x)
-			fmt.Println(net.IP(buf))
+			ips = append(ips, net.IP(buf))
 		}
+
+		// If output file is specified, save to file
+		if output != "" {
+			f, err := os.Create(output)
+			if err != nil {
+				fmt.Println("Error creating file:", err)
+				return
+			}
+			defer f.Close()
+
+			for _, ip := range ips {
+				f.WriteString(ip.String() + "\n")
+			}
+			fmt.Println("Saved", len(ips), "IPs to", output)
+		} else {
+			// Otherwise, just print
+			for _, ip := range ips {
+				fmt.Println(ip)
+			}
+		}
+
 	}
 }

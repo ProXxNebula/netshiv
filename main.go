@@ -69,6 +69,9 @@ func main() {
 	var decoder string
 	var encodingType string
 
+	// Flag to save to file
+	var output string
+
 	// Flag var for ipRange
 	flag.StringVar(&ipRange, "range", "", "use -range 192.168.0.1/24")
 	flag.StringVar(&subnet, "subnet", "", "use -subnet 192.168.0.1/24 to summarize CIDR info")
@@ -78,6 +81,9 @@ func main() {
 	flag.StringVar(&encoder, "encode", "", "use -encode 'StringHere' -type(hex, base64, url) to encode it")
 	flag.StringVar(&decoder, "decode", "", "use -decode 'DecodeThis' -type(hex, base64, url) to decode it")
 	flag.StringVar(&encodingType, "type", "", "use -type 'hex' -type(hex, base64, url) to encode/decode it")
+
+	// Output flag
+	flag.StringVar(&output, "o", "", "-o use this flag to save to the file for cidr expander only for now")
 
 	// Version flag
 	flag.BoolVar(&version, "version", false, "Show tool version")
@@ -93,10 +99,10 @@ func main() {
 	switch {
 	case ipRange != "":
 		mode := 0
-		Expander(ipRange, mode)
+		Expander(ipRange, output, mode)
 	case subnet != "":
 		mode := 1
-		Expander(subnet, mode)
+		Expander(subnet, output, mode)
 	case binaryConvert != "":
 		toBinary(binaryConvert)
 	case encoder != "":
