@@ -7,11 +7,6 @@ import (
 	"os"
 )
 
-// func saveToFile(output string) {
-// 	newFile, _ := os.Create(output)
-// 	defer newFile.Close()
-// }
-
 func Expander(ipAddress string, output string, mode int) {
 
 	// Parse IP/CIDR
