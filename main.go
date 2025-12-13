@@ -62,7 +62,7 @@ func main() {
 
 	var version bool
 	var ipRange string
-	var subnet string
+	var expand string
 	var binaryConvert string
 	// Flags var for encoder/decoder
 	var encoder string
@@ -74,7 +74,7 @@ func main() {
 
 	// Flag var for ipRange
 	flag.StringVar(&ipRange, "range", "", "use -range 192.168.0.1/24")
-	flag.StringVar(&subnet, "subnet", "", "use -subnet 192.168.0.1/24 to summarize CIDR info")
+	flag.StringVar(&expand, "expand", "", "use -subnet 192.168.0.1/24 to summarize CIDR info")
 	flag.StringVar(&binaryConvert, "binary", "", "use -binary 192.168.0.1 to convert ip to binary")
 
 	// Encoding/Decoding flags
@@ -100,9 +100,9 @@ func main() {
 	case ipRange != "":
 		mode := 0
 		Expander(ipRange, output, mode)
-	case subnet != "":
+	case expand != "":
 		mode := 1
-		Expander(subnet, output, mode)
+		Expander(expand, output, mode)
 	case binaryConvert != "":
 		toBinary(binaryConvert)
 	case encoder != "":
