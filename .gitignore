@@ -1,0 +1,14 @@
+# Go binaries
+netshiv
+*.exe
+
+# Build directories
+bin/
+dist/
+
+# Editor files
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
