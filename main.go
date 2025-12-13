@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	Version = "v0.1.0-dev" // manually updated for releases
+	Version = "v1.0.0-dev" // manually updated for releases
 	Commit  = "none"       // auto-injected at build time
 	Date    = "unknown"    // auto-injected at build time
 )
