@@ -165,14 +165,24 @@ netshiv -decode "grfg" -type rot13
 
 ```
 netshiv/
-├── main.go           # CLI entry point and flag handling
-├── expander.go       # CIDR expansion and subnet calculations
-├── binary.go         # Binary conversion utilities
-├── codec.go          # Encoding/decoding functions
-├── banner.go         # ASCII art and styling
-├── Makefile          # Build automation
-├── go.mod            # Go module definition
-└── README.md         # This file
+├── cmd/
+│   └── netshiv/                 # main entry point for your CLI
+│       └── main.go
+├── internal/                    # non-exported/internal packages
+│   ├── codec/                   # encoding/decoding utilities
+│   │   └── encoder.go
+│   ├── network/                 # subnet, IP expansion, binary conversion
+│   │   ├── cidrExpander.go
+│   │   └── binary.go
+│   └── ui/                      # banner & ANSI output helpers
+│       └── banner.go
+├── build/                       # release binaries (generated)
+├── go.mod
+├── go.sum
+├── Makefile
+├── LICENSE
+├── README.md
+└── CONTRIBUTING.md
 ```
 
 ### Building
