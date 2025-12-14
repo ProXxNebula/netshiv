@@ -13,7 +13,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey)](https://github.com/yourusername/netshiv/releases)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey)](https://github.com/ProXxNebula/netshiv/releases)
 
 ---
 
@@ -49,16 +49,16 @@ Multi-format encoding support:
 
 ### Download Pre-built Binaries
 
-Download the latest release for your platform from the [Releases](https://github.com/yourusername/netshiv/releases) page:
+Download the latest release for your platform from the [Releases](https://github.com/ProXxNebula/netshiv/releases) page:
 
 ```bash
 # Linux (x64)
-wget https://github.com/yourusername/netshiv/releases/download/v1.0.0/netshiv-linux-amd64
+wget https://github.com/ProXxNebula/netshiv/releases/download/v1.0.0/netshiv-linux-amd64
 chmod +x netshiv-linux-amd64
 sudo mv netshiv-linux-amd64 /usr/local/bin/netshiv
 
 # macOS (Apple Silicon)
-wget https://github.com/yourusername/netshiv/releases/download/v1.0.0/netshiv-darwin-arm64
+wget https://github.com/ProXxNebula/netshiv/releases/download/v1.0.0/netshiv-darwin-arm64
 chmod +x netshiv-darwin-arm64
 sudo mv netshiv-darwin-arm64 /usr/local/bin/netshiv
 
@@ -70,7 +70,7 @@ sudo mv netshiv-darwin-arm64 /usr/local/bin/netshiv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/netshiv.git
+git clone https://github.com/ProXxNebula/netshiv.git
 cd netshiv
 
 # Build for your platform
@@ -276,7 +276,7 @@ Contributions are welcome! Feel free to:
 
 ### Development Setup
 ```bash
-git clone https://github.com/yourusername/netshiv.git
+git clone https://github.com/ProXxNebula/netshiv.git
 cd netshiv
 go mod download
 make build
@@ -306,9 +306,9 @@ Unauthorized network scanning, penetration testing, or security assessments may 
 
 ## 🔗 Links
 
-- **GitHub**: [https://github.com/yourusername/netshiv](https://github.com/yourusername/netshiv)
-- **Issues**: [Report a bug](https://github.com/yourusername/netshiv/issues)
-- **Releases**: [Download binaries](https://github.com/yourusername/netshiv/releases)
+- **GitHub**: [https://github.com/ProXxNebula/netshiv](https://github.com/ProXxNebula/netshiv)
+- **Issues**: [Report a bug](https://github.com/ProXxNebula/netshiv/issues)
+- **Releases**: [Download binaries](https://github.com/ProXxNebula/netshiv/releases)
 
 ---
 
