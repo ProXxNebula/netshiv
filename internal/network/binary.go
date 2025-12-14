@@ -5,7 +5,8 @@ import (
 	"net"
 )
 
-func ToBinary(ip string) { // NOT exported
+func ToBinary(ip string) {
+	// Parse ipv4 from string to 4byte representation
 	binaryParse := net.ParseIP(ip).To4()
 
 	result := ""
