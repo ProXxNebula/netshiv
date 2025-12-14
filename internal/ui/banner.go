@@ -1,4 +1,4 @@
-package main
+package ui
 
 import "fmt"
 
@@ -15,7 +15,7 @@ const (
 	Dim         = "\033[2m"
 )
 
-func printBanner() {
+func PrintBanner() {
 	banner := fmt.Sprintf(`
 %s%s
     ███╗   ██╗███████╗████████╗███████╗██╗  ██╗██╗██╗   ██╗
@@ -48,6 +48,6 @@ func printBanner() {
 	fmt.Println(banner)
 }
 
-func banner() {
-	printBanner()
+func Banner() {
+	PrintBanner()
 }

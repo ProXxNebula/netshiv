@@ -1,11 +1,11 @@
-package main
+package cidr
 
 import (
 	"fmt"
 	"net"
 )
 
-func toBinary(ip string) { // NOT exported
+func ToBinary(ip string) { // NOT exported
 	binaryParse := net.ParseIP(ip).To4()
 
 	result := ""
