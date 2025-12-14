@@ -26,8 +26,8 @@ func PrintBanner() {
     ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝  
 %s
     %s[%s═══════════════════════════════════════════════════════%s]%s
-    %s│%s          Network Penetration & Analysis Tool         %s│%s
-    %s│%s                    %sv1.0.0-alpha%s                        %s│%s
+    %s│%s          Network Penetration & Analysis Tool          %s│%s
+    %s│%s                    %sv1.0.0-alpha%s                       %s│%s
     %s[%s═══════════════════════════════════════════════════════%s]%s
 
 %s[%s>%s]%s CIDR parser ready...
