@@ -26,7 +26,7 @@ func PrintBanner() {
     ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝  
 %s
     %s[%s═══════════════════════════════════════════════════════%s]%s
-    %s│%s          Network Penetration & Analysis Tool          %s│%s
+    %s│%s          network helper toolkit / CLI utility         %s│%s
     %s│%s                    %sv1.0.0-alpha%s                       %s│%s
     %s[%s═══════════════════════════════════════════════════════%s]%s
 
