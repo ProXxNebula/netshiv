@@ -9,7 +9,7 @@
     ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝  
 ```
 
-**Network Penetration & Analysis Tool** - A powerful CLI utility for subnet calculations, IP range expansion, binary conversion, and encoding operations.
+**Network Penetration Utility** - A powerful CLI utility for subnet calculations, IP range expansion, binary conversion, and encoding operations.
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
